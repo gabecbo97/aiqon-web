@@ -23,25 +23,12 @@
 
 <div id="device" class="desk">
   <span></span>
-  <div class="contCube">content text</div>
+  <div class="contCube text-center">
+    
+  </div>
 </div>
 
 <style>
-  *,
-  *:before,
-  *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  body {
-    background: #f4f4f0;
-    font: 100%/1.618 "Lato", sans-serif;
-    font-weight: 400;
-    color: #666;
-    text-rendering: optimizeLegibility;
-  }
-
   #device,
   #device:before,
   #device:after {
@@ -63,13 +50,14 @@
   }
 
   #device {
+    z-index: 0;
     position: relative;
     margin: 80px auto 0;
     background: #525255;
   }
 
   #device:before {
-    background: #ec8277;
+    background: teal;
     z-index: 2;
   }
 
