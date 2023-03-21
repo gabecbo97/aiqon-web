@@ -6,7 +6,14 @@
         <span style="color: teal">proteger</span> hoje?
       </h2>
     </div>
-    <div class="col-md-6">{% include site/home/components/circle-animation.html %}</div>
+    <div class="col-md-6">
+      {% include site/home/components/logos-float.html %}
+    </div>
+  </div>
+  <div class="scroll-down">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
   <div class="container text-center row-keep-security">
     <h2 class="title-home-secondary">Como Protegemos</h2>
@@ -19,7 +26,6 @@
 </div>
 
 {% include site/home/components/horizontal-slider.html %}
-
 
 <div class="container-fluid content-keep-compliance text-center py-5 px-5">
   <div class="row row-bg-compliance justify-content-center">
@@ -137,12 +143,7 @@
     min-height: 120vh;
     padding-top: 20vh;
 
-    background: linear-gradient(
-      159deg,
-      rgba(167, 167, 167, 1) 0%,
-      rgba(201, 209, 209, 1) 31%,
-      rgba(237, 246, 246, 1) 100%
-    );
+    background-color: black;
   }
   .card-compliance {
     width: 50%;
@@ -161,7 +162,7 @@
     box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.6);
     transition: 0.3s;
   }
-  .content-compliance{
+  .content-compliance {
     padding: 0 18vw !important;
   }
   .img-card-compliance {
@@ -189,19 +190,57 @@
     color: white;
     text-shadow: 1px 1px 2px rgba(128, 128, 128, 0.502);
   }
-  .title-home-secondary{
+  .title-home-secondary {
     text-transform: uppercase;
     color: gray;
-    font-weight:600;
+    font-weight: 600;
     font-size: 40px;
   }
   .row-keep-security {
     padding-top: 20vh !important ;
     padding-bottom: 15vh;
   }
-  .content-card-compliance{
+  .content-card-compliance {
     padding-bottom: 10vh;
-  
+  }
+
+  /* Scroll */
+
+  .scroll-down {
+    position: absolute;
+   
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+  }
+  .scroll-down span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  .scroll-down span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  .scroll-down span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+    }
   }
 
   @media only screen and (max-width: 990px) {
@@ -213,7 +252,5 @@
       padding-top: 1vh;
       padding-left: 0;
     }
-    
   }
-
 </style>
