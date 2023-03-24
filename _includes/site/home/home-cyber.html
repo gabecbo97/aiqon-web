@@ -1,6 +1,6 @@
 <div class="container-fluid homescreen">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 content-title-primary">
       <h2 class="title-primary-home">
         O que você quer <br />
         <span style="color: teal">proteger</span> hoje?
@@ -27,7 +27,7 @@
 
 {% include site/home/components/horizontal-slider.html %}
 
-<div class="container-fluid content-keep-compliance text-center py-5 px-5">
+<div class="container-fluid content-keep-compliance text-center py-5 px-5 m-content-compliance">
   <div class="row row-bg-compliance justify-content-center">
     <h2>Se Mantenha em Conformidade</h2>
   </div>
@@ -244,6 +244,15 @@
   }
 
   @media only screen and (max-width: 990px) {
+
+    .m-content-compliance{
+      margin-top: 25vh !important;
+    }
+
+    .margin-top-endpoint{
+      margin-top: 30vh !important;
+      
+    }
     .homescreen {
       padding-top: 15vh;
     }

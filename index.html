@@ -4,7 +4,6 @@ layout: default
 
 {% include site/home/home-cyber.html %} {% include site/home/home_mobile.html %}
 
-
 <!--
 <div class="container-fluid -aiqon">
   <div class="row">
@@ -401,14 +400,71 @@ layout: default
     </div>
   </div>
 </div> -->
-{% include site/deal.html %} {% include site/customers.html %} 
+{% include site/deal.html %}
 
-<div class="container-fluid" style="padding: 0; margin: 0; position: sticky; z-index: 10;">
-  {% include
-    site/trial.html title="Solicite uma demonstração" id="home_form" %} 
+<div class="container-fluid">
+  <div class="row justify-content-center aiqon-partner">
+    <div class="col-md-4 iten-aiqon-partner">
+      <img src="" alt="" />
+      <p>
+        Abrace o mercado de segurança em nuvem em rápida expansão e aumente seu
+        valor para clientes de segurança corporativa com a única plataforma que
+        oferece visibilidade em ambientes de TI em nuvem híbrida .
+      </p>
+    </div>
+    <div class="col-md-4 iten-aiqon-partner">
+      <img src="" alt="" />
+      <p>
+        Impulsione a aquisição de novos clientes e gere novos negócios nos
+        mercados de segurança e governança de TI, oferecendo uma solução única
+        com recursos de integração ilimitados por meio de uma API RESTful .
+      </p>
+    </div>
+    <div class="col-md-4 iten-aiqon-partner">
+      <img src="" alt="" />
+      <p>
+        Aumente a receita fazendo vendas cruzadas do Netwrix Auditor para os
+        usuários de qualquer SIEM , incluindo HP ArcSight, Splunk e IBM QRadar ,
+        fornecendo assim uma solução abrangente.
+      </p>
+    </div>
+    <div class="col-md-4 iten-aiqon-partner">
+      <img src="" alt="" />
+      <p>
+        Diferencie seus negócios enfrentando os desafios de HIPAA, SOX, PCI,
+        FISMA, GLBA, FERPA, NERC e outras auditorias de conformidade para
+        alcançar novos mercados verticais, como financeiro, saúde, jurídico e
+        federal.
+      </p>
+    </div>
+    <div class="col-md-4 iten-aiqon-partner">
+      <img src="" alt="" />
+      <p>
+        Diversifique os fluxos de receita recorrentes com nosso Programa MSP
+        adicionando conformidade como serviço (CaaS), infraestrutura de desktop
+        virtual segura (SVDI) e serviços avançados de SIEM ao seu portfólio.
+      </p>
+    </div>
+    <div class="col-md-4 iten-aiqon-partner">
+      <img src="" alt="" />
+      <p>
+        Aproveite nossas vendas complementares e treinamento técnico , bem como
+        nossos recursos de marketing prontos para uso , para simplificar sua
+        integração com o Netwrix.
+      </p>
+    </div>
+  </div>
 </div>
-{% include
-site/js/collapsible.html %}
+
+{% include site/customers.html %}
+
+<div
+  class="container-fluid"
+  style="padding: 0; margin: 0; position: sticky; z-index: 10"
+>
+  {% include site/trial.html title="Solicite uma demonstração" id="home_form" %}
+</div>
+{% include site/js/collapsible.html %}
 
 <style>
   .logo-slide-home {
@@ -416,5 +472,12 @@ site/js/collapsible.html %}
     display: flex !important;
     align-self: center !important;
     margin: 0 !important;
+  }
+  .aiqon-partner{
+    padding: 5vh 5vw !important;
+    text-align: center;
+  }
+  .iten-aiqon-partner{
+    padding: 60px;
   }
 </style>

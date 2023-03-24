@@ -147,8 +147,8 @@
 </section>
 
 <main class="spa-main">
-  <section class="spa-slide" id="tab-react">
-    <div class="row">
+  <section class="spa-slide spa-bg-1" id="tab-react">
+    <div class="row" style="padding-top: 30vh;" >
       <div class="col-md-6 col-text-cyber">
         <h3 class="title-cyber-cards">Dados</h3>
         <p class="desc-cyber-cards">
@@ -181,8 +181,8 @@
         </ul>
       </div>
       <div class="col-md-6 content-item-card">
-        {% include site/home/components/data.html %}
-        <!--
+        <img src="/assets/img/home/vertical-slider/data.svg" alt="" />
+        <!-- {% include site/home/components/data.html %}
         <div class="row justify-content-end">
           <div class="col-2 item-card-cyber">
             <img
@@ -246,7 +246,7 @@
       </div>
     </div>
   </section>
-  <section class="spa-slide slide-identify" id="tab-angular">
+  <section class="spa-slide slide-identify spa-bg-3" id="tab-angular">
     <div class="row">
       <div class="col-md-6 col-text-cyber">
         <h3 class="title-cyber-cards text-identify">Identidade</h3>
@@ -283,7 +283,7 @@
       </div>
     </div>
   </section>
-  <section class="spa-slide slide-solutions" id="tab-cssscript">
+  <section class="spa-slide slide-solutions spa-bg-4" id="tab-cssscript">
     <div class="row">
       <div class="col-md-6 col-text-cyber">
         <h3 class="title-cyber-cards">Soluções Enterprise</h3>
@@ -318,9 +318,9 @@
       </div>
     </div>
   </section>
-  <section class="spa-slide slide-endpoint" id="tab-vue">
+  <section class="spa-slide slide-endpoint spa-bg-5" id="tab-vue">
     <div class="row">
-      <div class="col-md-6 col-text-cyber">
+      <div class="col-md-6 col-text-cyber margin-top-endpoint">
         <h3 class="title-cyber-cards">EndPoint</h3>
         <p class="desc-cyber-cards">
           Proteja os endpoint e servidores contra ameaças cibernéticas,
@@ -407,6 +407,7 @@
   }
   .content-item-card {
     margin-top: 8vh;
+    
   }
   .col-text-cyber {
     text-align: left;
@@ -486,16 +487,28 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 100vh;
-    background-image: url(/assets/img/home/bg-home-cyber.png);
-    background-size: contain;
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     text-align: center;
     padding: 3vh 6vw;
+    width: 100vw;
   }
-  .slide-endpoint {
-    height: 100vh !important;
+
+  .spa-bg-1 {
+    background-image: url(/assets/img/home/vertical-slider/1bg.png);
   }
+  .spa-bg-3 {
+    background-image: url(/assets/img/home/vertical-slider/3bg.png);
+  }
+  .spa-bg-4 {
+    background-image: url(/assets/img/home/vertical-slider/4bg.png);
+  }
+  .spa-bg-5 {
+    background-image: url(/assets/img/home/vertical-slider/5bg.png);
+  }
+
   .sticky-nav-tabs-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -595,7 +608,7 @@
     }
 
     .sticky-nav-tabs-container--top-second {
-      top: 70px;
+      top: 67px;
     }
     .col-text-cyber {
       padding-top: 15vh;
@@ -603,7 +616,7 @@
     .title-cyber-cards {
       font-size: 40px !important;
     }
-    .responsive-mobile{
+    .responsive-mobile {
       height: 50vh;
       margin-top: 10vh;
       width: 100vw;
