@@ -148,7 +148,7 @@
 
 <main class="spa-main">
   <section class="spa-slide spa-bg-1" id="tab-react">
-    <div class="row" style="padding-top: 30vh;" >
+    <div class="row" style="padding-top: 30vh">
       <div class="col-md-6 col-text-cyber">
         <h3 class="title-cyber-cards">Dados</h3>
         <p class="desc-cyber-cards">
@@ -181,7 +181,11 @@
         </ul>
       </div>
       <div class="col-md-6 content-item-card">
-        <img src="/assets/img/home/vertical-slider/data.svg" alt="" />
+        <img
+          src="/assets/img/home/vertical-slider/data.svg"
+          class="img-item-card"
+          alt=""
+        />
         <!-- {% include site/home/components/data.html %}
         <div class="row justify-content-end">
           <div class="col-2 item-card-cyber">
@@ -247,7 +251,7 @@
     </div>
   </section>
   <section class="spa-slide slide-identify spa-bg-3" id="tab-angular">
-    <div class="row">
+    <div class="row row-reverse">
       <div class="col-md-6 col-text-cyber">
         <h3 class="title-cyber-cards text-identify">Identidade</h3>
         <p class="desc-cyber-cards">
@@ -279,7 +283,11 @@
         </ul>
       </div>
       <div class="col-md-6 content-item-card">
-        {% include site/home/components/identify.html %}
+        <img
+          src="/assets/img/home/vertical-slider/identify.svg"
+          class="img-item-card"
+          alt=""
+        />
       </div>
     </div>
   </section>
@@ -314,12 +322,16 @@
         </ul>
       </div>
       <div class="col-md-6 content-item-card">
-        {% include site/home/components/solution.html %}
+        <img
+          src="/assets/img/home/vertical-slider/solution.svg"
+          class="img-item-card"
+          alt=""
+        />
       </div>
     </div>
   </section>
   <section class="spa-slide slide-endpoint spa-bg-5" id="tab-vue">
-    <div class="row">
+    <div class="row row-reverse">
       <div class="col-md-6 col-text-cyber margin-top-endpoint">
         <h3 class="title-cyber-cards">EndPoint</h3>
         <p class="desc-cyber-cards">
@@ -352,7 +364,11 @@
         </ul>
       </div>
       <div class="col-md-6 content-item-card responsive-mobile">
-        {% include site/home/components/endpoint.html %}
+        <img
+          src="/assets/img/home/vertical-slider/solution.svg"
+          class="img-item-card"
+          alt=""
+        />
       </div>
     </div>
   </section>
@@ -391,6 +407,9 @@
     font-weight: bold;
     text-align: left;
   }
+  .img-item-card {
+    max-width: 35vw;
+  }
   .cyber-cards {
     text-align: left;
   }
@@ -407,7 +426,6 @@
   }
   .content-item-card {
     margin-top: 8vh;
-    
   }
   .col-text-cyber {
     text-align: left;
@@ -419,6 +437,9 @@
   .icon-cyber-cards {
     padding-top: 2vh;
     max-width: 40px;
+  }
+  .row-reverse {
+    flex-direction: row-reverse;
   }
   a {
     text-decoration: none;
@@ -500,12 +521,16 @@
     background-image: url(/assets/img/home/vertical-slider/1bg.png);
   }
   .spa-bg-3 {
+    justify-content: flex-start !important;
     background-image: url(/assets/img/home/vertical-slider/3bg.png);
   }
   .spa-bg-4 {
+  padding-top: 50vh;
     background-image: url(/assets/img/home/vertical-slider/4bg.png);
   }
   .spa-bg-5 {
+    justify-content: flex-start !important;
+    padding-top: 10vh;
     background-image: url(/assets/img/home/vertical-slider/5bg.png);
   }
 
