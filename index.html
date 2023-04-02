@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include site/home/home-cyber.html %} {% include site/home/home_mobile.html %}
+{% include site/home/home-cyber.html %}
 
 <!--
 <div class="container-fluid -aiqon">
@@ -403,9 +403,13 @@ layout: default
 {% include site/deal.html %}
 
 <div class="container-fluid">
-  <div class="row justify-content-center aiqon-partner">
+  <div class="row aiqon-partner">
     <div class="col-md-4 iten-aiqon-partner">
-      <img src="" alt="" />
+      <img
+        class="img-partner"
+        src="/assets/img/home/partner/cloud.png"
+        alt=""
+      />
       <p>
         Abrace o mercado de segurança em nuvem em rápida expansão e aumente seu
         valor para clientes de segurança corporativa com a única plataforma que
@@ -413,7 +417,11 @@ layout: default
       </p>
     </div>
     <div class="col-md-4 iten-aiqon-partner">
-      <img src="" alt="" />
+      <img
+        class="img-partner"
+        src="/assets/img/home/partner/brackets.png"
+        alt=""
+      />
       <p>
         Impulsione a aquisição de novos clientes e gere novos negócios nos
         mercados de segurança e governança de TI, oferecendo uma solução única
@@ -421,7 +429,11 @@ layout: default
       </p>
     </div>
     <div class="col-md-4 iten-aiqon-partner">
-      <img src="" alt="" />
+      <img
+        class="img-partner"
+        src="/assets/img/home/partner/graphic.png"
+        alt=""
+      />
       <p>
         Aumente a receita fazendo vendas cruzadas do Netwrix Auditor para os
         usuários de qualquer SIEM , incluindo HP ArcSight, Splunk e IBM QRadar ,
@@ -429,7 +441,7 @@ layout: default
       </p>
     </div>
     <div class="col-md-4 iten-aiqon-partner">
-      <img src="" alt="" />
+      <img class="img-partner" src="/assets/img/home/partner/" alt="" />
       <p>
         Diferencie seus negócios enfrentando os desafios de HIPAA, SOX, PCI,
         FISMA, GLBA, FERPA, NERC e outras auditorias de conformidade para
@@ -438,7 +450,7 @@ layout: default
       </p>
     </div>
     <div class="col-md-4 iten-aiqon-partner">
-      <img src="" alt="" />
+      <img class="img-partner" src="/assets/img/home/partner/msp.png" alt="" />
       <p>
         Diversifique os fluxos de receita recorrentes com nosso Programa MSP
         adicionando conformidade como serviço (CaaS), infraestrutura de desktop
@@ -446,7 +458,7 @@ layout: default
       </p>
     </div>
     <div class="col-md-4 iten-aiqon-partner">
-      <img src="" alt="" />
+      <img class="img-partner" src="/assets/img/home/partner/case.png" alt="" />
       <p>
         Aproveite nossas vendas complementares e treinamento técnico , bem como
         nossos recursos de marketing prontos para uso , para simplificar sua
@@ -473,11 +485,17 @@ layout: default
     align-self: center !important;
     margin: 0 !important;
   }
-  .aiqon-partner{
+  .aiqon-partner {
     padding: 5vh 5vw !important;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
   }
-  .iten-aiqon-partner{
+  .iten-aiqon-partner {
     padding: 60px;
+  }
+  .img-partner {
+    padding: 30px;
   }
 </style>
