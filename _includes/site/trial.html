@@ -46,6 +46,10 @@
     text-align: center;
     font-size: 2em;
   }
+  .cargo_select {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
   @media (max-width: 768px) {
     .-trial-container h4 {
       font-size: 1em;
@@ -56,13 +60,11 @@
   }
 </style>
 <div class="container-fluid p-0 m-0 -trial-container" id="trial-container">
-  <div class="row ">
+  <div class="row">
     <div
       class="col d-flex flex-column justify-content-center align-items-center pt-5 mt-5"
     >
-      <h1 class="text-center text-bolder">
-        {{ include.title }} 
-      </h1>
+      <h1 class="text-center text-bolder">{{ include.title }}</h1>
       <h4>
         É grátis! Um de nossos especialistas está pronto para tirar todas as
         suas dúvidas.
@@ -73,7 +75,7 @@
     <div
       class="col d-flex flex-column justify-content-center align-items-center"
     >
-      <form class="-trial-form pb-5" id= "{{ include.id }}" >
+      <form class="-trial-form pb-5" id="{{ include.id }}">
         <div class="form-row">
           <div class="col">
             <input
@@ -119,7 +121,8 @@
         </div>
         <div class="form-row">
           <div class="col">
-            <input style="color: black;"
+            <input
+              style="color: black"
               aria-label="E-mail profissional."
               class="form-control"
               type="text"
@@ -132,20 +135,24 @@
             />
           </div>
           <div class="col">
-            <input style="color: black;"
-              aria-label="Cargo"
-              class="form-control"
-              type="text"
-              name="cargo"
-              id="cargo"
-              placeholder="Cargo"
-              required
-              oninvalid="this.setCustomValidity('Por favor, digite um e-mail profissional válido.')"
-              oninput="setCustomValidity('')"
-            />
+            <select id="Cargo"  required class="form-control cargo_select">
+              <option disabled selected>Cargo</option>
+              <option value="Analista">Analista</option>
+              <option value="Auditor">Auditor</option>
+              <option value="Advogado">Advogado</option>
+              <option value="CEO">CEO</option>
+              <option value="Coordenador">Coordenador</option>
+              <option value="DBA">DBA</option>
+              <option value="Diretor">Diretor</option>
+              <option value="Engenheiro">Engenheiro</option>
+              <option value="Gerente">Gerente</option>
+              <option value="Supervisor">Supervisor</option>
+              <option value="Técnico">Técnico</option>
+              <option value="Outro">Outro</option>
+            </select>
           </div>
         </div>
-       
+
         <div class="form-row">
           <div class="col">
             <input
@@ -181,7 +188,7 @@
                   value="1"
                   required
                 />
-  
+
                 Eu concordo em receber comunicações e ofertas personalizadas de
                 acordo com meus interesses.
               </label>
@@ -220,45 +227,45 @@
 <script src="../../assets/js/formMask.js"></script>
 <script src="/assets/js/phoneMask.js"></script>
 <script>
-  const form = document.getElementById("trialForm")
-  const url = "https://us-central1-aiqondb.cloudfunctions.net/api/trial"
+  const form = document.getElementById("trialForm");
+  const url = "https://us-central1-aiqondb.cloudfunctions.net/api/trial";
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault()
-    console.log("Enviando formulário...")
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    console.log("Enviando formulário...");
 
-    const formData = new FormData(this)
-    const origin = window.location.pathname
-    const trialRequestJson = {}
+    const formData = new FormData(this);
+    const origin = window.location.pathname;
+    const trialRequestJson = {};
 
     for (const pair of formData) {
-      trialRequestJson[pair[0]] = pair[1]
+      trialRequestJson[pair[0]] = pair[1];
     }
-    trialRequestJson["origin"] = origin
+    trialRequestJson["origin"] = origin;
     fetch(url, {
       method: "post",
       body: JSON.stringify(trialRequestJson),
       mode: "cors",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      credentials: "same-origin"
+      credentials: "same-origin",
     })
       .then(formSuccess())
-      .catch(function(err) {
-        console.log("Ocorreu um erro: ", err)
-      })
-  })
+      .catch(function (err) {
+        console.log("Ocorreu um erro: ", err);
+      });
+  });
 
- // function formSuccess() {
-    // const form = document.querySelector(".-trial-container")
-    // const formFields = document.querySelectorAll("input")
-    // for (field of formFields) {
-    //   field.value = ""
-    // }
-    // form.innerHTML = `<p id='formSuccessMessage'>
-    //     Mensagem enviada! <br> Entraremos em contato em breve.
-    //   </p>`
-   // window.location.href = "/obrigado"
+  // function formSuccess() {
+  // const form = document.querySelector(".-trial-container")
+  // const formFields = document.querySelectorAll("input")
+  // for (field of formFields) {
+  //   field.value = ""
+  // }
+  // form.innerHTML = `<p id='formSuccessMessage'>
+  //     Mensagem enviada! <br> Entraremos em contato em breve.
+  //   </p>`
+  // window.location.href = "/obrigado"
   //}
 </script>

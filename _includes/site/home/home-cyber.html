@@ -27,7 +27,7 @@
 
 {% include site/home/components/content-conect.html %}
 
-<div class="container-fluid content-keep-compliance text-center text-gray py-5 px-5 m-content-compliance">
+<div class="container-fluid content-keep-compliance text-center text-gray m-content-compliance">
   <div class="row row-bg-compliance justify-content-center">
     <h2>Se Mantenha em Conformidade</h2>
   </div>
@@ -138,12 +138,19 @@
   </div>
 </div>
 
+
 <style>
+  body{
+    overflow-x: hidden;
+  }
   .homescreen {
     min-height: 120vh;
     padding-top: 20vh;
 
-    background-color: black;
+   background: linear-gradient(0deg, rgba(10,0,97,1) 0%, rgba(0,0,0,1) 38%);
+  }
+  .m-content-compliance{
+    padding-top: 10vh;
   }
   .card-compliance {
     width: 50%;
@@ -175,6 +182,7 @@
     left: 0;
     color: #2196f3;
   }
+  
   .content-keep-compliance,
   .content-card-compliance {
     background-color: white;
@@ -246,7 +254,7 @@
   @media only screen and (max-width: 990px) {
 
     .m-content-compliance{
-      margin-top: 25vh !important;
+      margin-top: 10vh !important;
     }
         .homescreen {
       padding-top: 15vh;
