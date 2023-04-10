@@ -1,5 +1,5 @@
 <div class="container-fluid homescreen">
-  <div class="row">
+  <div class="row row-logos-float">
     <div class="col-md-6 content-title-primary">
       <h2 class="title-primary-home">
         O que você quer <br />
@@ -27,7 +27,9 @@
 
 {% include site/home/components/content-conect.html %}
 
-<div class="container-fluid content-keep-compliance text-center text-gray m-content-compliance">
+<div
+  class="container-fluid content-keep-compliance text-center text-gray m-content-compliance"
+>
   <div class="row row-bg-compliance justify-content-center">
     <h2>Se Mantenha em Conformidade</h2>
   </div>
@@ -138,17 +140,20 @@
   </div>
 </div>
 
-
 <style>
-  body{
+  body {
     overflow-x: hidden;
   }
   .homescreen {
     min-height: 120vh;
     padding-top: 20vh;
-    background: linear-gradient(0deg, rgba(10,0,97,1) 0%, rgba(0,0,0,1) 38%);
+    background: linear-gradient(
+      0deg,
+      rgba(10, 0, 97, 1) 0%,
+      rgba(0, 0, 0, 1) 38%
+    );
   }
-  .m-content-compliance{
+  .m-content-compliance {
     padding-top: 10vh;
   }
   .card-compliance {
@@ -173,6 +178,7 @@
   }
   .img-card-compliance {
     max-width: 70px;
+    padding: 15px;
   }
   .text-uppercase {
     bottom: 0;
@@ -181,7 +187,7 @@
     left: 0;
     color: #2196f3;
   }
-  
+
   .content-keep-compliance,
   .content-card-compliance {
     background-color: white;
@@ -215,7 +221,7 @@
 
   .scroll-down {
     position: absolute;
-   
+
     left: 50%;
     bottom: 0;
     transform: translate(-50%, -50%);
@@ -254,18 +260,19 @@
     .title-primary-home {
       font-size: 5em !important;
     }
-
+    .row-logos-float {
+      flex-direction: column;
+    }
   }
   @media only screen and (max-width: 990px) {
-
-    .m-content-compliance{
+    .m-content-compliance {
       margin-top: 10vh !important;
     }
-        .homescreen {
+    .homescreen {
       padding-top: 15vh;
     }
     .title-primary-home {
-      font-size: 55px;
+      font-size: 55px !important;
       padding-top: 1vh;
       padding-left: 0;
     }
