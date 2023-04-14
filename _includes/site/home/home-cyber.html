@@ -6,7 +6,8 @@
         <span style="color: teal">proteger</span> hoje?
       </h2>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 content-float">
+      {% include site/home/components/logos-float.html %}
       {% include site/home/components/logos-float-alt.html %}
     </div>
   </div>
@@ -248,6 +249,14 @@
     }
     .row-logos-float {
       flex-direction: column;
+    }
+    .homescreen {
+      height: 100vh !important;
+    }
+    .content-float{
+      max-width: 80vw;
+      margin-left: -18vw;
+      margin-top: 12vh;
     }
   }
   @media only screen and (max-width: 990px) {
