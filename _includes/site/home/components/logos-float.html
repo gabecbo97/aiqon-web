@@ -652,8 +652,8 @@
       ctx.beginPath();
       ctx.translate(this.xProjected, this.yProjected); // move to the projected coordinates
       ctx.scale(
-        (this.scaleProjected * SCALE * width) / 1920,
-        (this.scaleProjected * SCALE * width) / 1920
+        (this.scaleProjected * SCALE * width) / 2000,
+        (this.scaleProjected * SCALE * width) / 2000
       ); // scale smaller if farther and bigger if closer
 
       this.paths.forEach((path, i) => {
